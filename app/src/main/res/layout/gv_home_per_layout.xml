@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/qb_px_5"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.dd.ShadowLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:sl_dx="2dp"
+            app:sl_dy="2dp"
+            app:sl_shadowColor="@color/shadow">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/dialog_loading_bg">
+
+                <ImageView
+                    android:id="@+id/home_gv_item_iv"
+                    android:layout_width="@dimen/qb_px_70"
+                    android:layout_height="@dimen/qb_px_90"
+                    android:scaleType="centerInside"/>
+            </LinearLayout>
+
+
+        </com.dd.ShadowLayout>
+
+        <TextView
+            android:id="@+id/home_gv_item_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/qb_px_5"
+            android:text=""
+            android:textSize="@dimen/qb_px_8"/>
+
+    </LinearLayout>
+
+</LinearLayout>

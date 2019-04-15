@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00000000</color>
+    <color name="colorPrimaryDark">#FFFFFF</color>
+    <color name="colorAccent">#A02b24</color>
+
+    <color name="colorTheme">#A02b24</color>
+    <color name="colorTitle">#cf342a</color>
+    <color name="shadow">#AA000000</color>
+    <color name="color_FFC65923">#C65923</color>
+
+    <color name="color_FFf9fcfd">#f9fcfd</color>
+
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="tran">#00000000</color>
+    <color name="color_FF002b66">#002b66</color>
+    <color name="color_FF333333">#FF333333</color>
+    <color name="color_FFaaaaaa">#FFaaaaaa</color>
+    <color name="color_FFeeeeee">#99eeeeee</color>
+
+
+    <!--分割线-->
+    <color name="color_FFe9e6e6">#FFe9e6e6</color>
+    <!--选机边框线条颜色-->
+    <color name="color_roundimage_rim">#FFdddddd</color>
+
+</resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="@dimen/qb_px_10"
+              android:layout_marginRight="@dimen/qb_px_10"
+              android:layout_marginTop="@dimen/qb_px_5"
+              android:background="@drawable/dialog_loading_bg"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/newslist_fagment_lv_item_tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/qb_px_15"
+        android:layout_marginRight="@dimen/qb_px_15"
+        android:layout_marginTop="@dimen/qb_px_10"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="获取失败"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/newslist_fagment_lv_item_tv_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/qb_px_5"
+        android:layout_marginRight="@dimen/qb_px_10"
+        android:gravity="right"
+        android:text="error"/>
+</LinearLayout>

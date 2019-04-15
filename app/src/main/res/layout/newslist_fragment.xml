@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#EBEBEB"
+                android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/newslist_fragment_ll_loading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/qb_px_5"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+    <ListView
+        android:id="@+id/newslist_fragment_lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:divider="#00000000"
+        android:dividerHeight="10dp"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/newslist_fagment_ll_page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/qb_px_4"
+        android:gravity="center"
+        android:visibility="gone">
+
+
+        <TextView
+            android:id="@+id/newslist_fagment_tv_nowpage"
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/qb_px_10"
+            android:layout_height="wrap_content"
+            android:text="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/qb_px_10"
+            android:layout_height="wrap_content"
+            android:text=" / "/>
+
+        <TextView
+            android:id="@+id/newslist_fagment_tv_localpage"
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/qb_px_10"
+            android:layout_height="wrap_content"
+            android:text="3"/>
+
+
+    </LinearLayout>
+</RelativeLayout>
