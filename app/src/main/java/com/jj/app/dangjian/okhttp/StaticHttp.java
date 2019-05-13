@@ -12,8 +12,8 @@ public class StaticHttp {
 
     private static final String PERIODICAL_ONE = "MOM/getPressType";
     private static final String PERIODICAL_TWO = "MOM/getPressChildType";
-    private static final String PERIODICAL_LISTING = "MOM/getPeriodical";
-    private static final String PERIODICAL_LOOK = "MOM/getPeriodicalDetails";
+    private static final String PERIODICAL_LOOK = "MOM/getPeriodical";
+    private static final String PERIODICAL_LISTING = "MOM/getPeriodicalDetails";
     private static final String ALL_CATEGORY = "MOM/findAllCategory";
     private static final String FIND_ARTICLE = "MOM/findArticle";
 

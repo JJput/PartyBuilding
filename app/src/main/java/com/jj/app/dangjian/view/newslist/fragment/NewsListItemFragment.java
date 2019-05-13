@@ -77,14 +77,7 @@ public class NewsListItemFragment extends LazyloadFragment {
 
     private void initData() {
         datas.clear();
-        //        for (int i = 0; i < PAGE_NUM; i++) {
-        //            NewsListModel.DATABean bean = new NewsListModel.DATABean();
-        //            bean.setTitle(i + "test");
-        //            bean.setTime("2019年" + i + "月20日");
-        //            bean.setUrl("www.baidu.com");
-        //            //            bean.setTime(String.valueOf(new Date().getTime()));
-        //            datas.add(bean);
-        //        }
+
         RequestCenter.requsetFindArticle(DevUtils.getDevID(), id, nowPage + "", PAGE_NUM + "", new DisposeDataListener() {
             @Override
             public void onSuccess(Object responseObj) {

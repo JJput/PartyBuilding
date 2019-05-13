@@ -18,5 +18,6 @@ public class mApplication extends Application{
     public void onCreate() {
         super.onCreate();
         Bmob.initialize(this, StaticClass.BMOD_APP_ID);
+//        Bmob.initialize(this,"12784168944a56ae41c4575686b7b332");
     }
 }

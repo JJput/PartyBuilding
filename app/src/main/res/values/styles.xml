@@ -24,4 +24,9 @@
         <item name="android:textSize">@dimen/qb_px_12</item>
     </style>
 
+    <style name="TabLayoutTextStyle">
+        <item name="android:textSize">@dimen/tablayoutsize</item>
+    </style>
+
+    <dimen name="tablayoutsize">30dp</dimen>
 </resources>

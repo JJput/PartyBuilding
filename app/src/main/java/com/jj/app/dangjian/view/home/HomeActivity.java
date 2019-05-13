@@ -43,13 +43,9 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import cn.bmob.v3.exception.BmobException;
-import cn.bmob.v3.listener.BmobUpdateListener;
 import cn.bmob.v3.update.BmobUpdateAgent;
-import cn.bmob.v3.update.UpdateResponse;
 import github.jjput.mvpbaselibrary.base.BaseActivity;
 import github.jjput.utils.BarUtils;
-import github.jjput.utils.LogUtils;
 
 /**
  * @作者: JJ
@@ -60,6 +56,7 @@ import github.jjput.utils.LogUtils;
 public class HomeActivity extends BaseActivity<HomeContract.Presenter> implements HomeContract.View {
 
     public static final String[] LIST_TITLE_NAME = {"横滚轮播图片", "党建动态", "政策文件", "基层党建", "党建期刊"};
+    public static final String CONNECT_INTERNET_TIME_OUT = "time out";
     //间隔时间
     private static int PAGER_TIOME = 1000 * 10;
 
@@ -203,28 +200,9 @@ public class HomeActivity extends BaseActivity<HomeContract.Presenter> implement
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
-        BmobUpdateAgent.initAppVersion();
         //TODO 设置仅WiFi环境更新
         BmobUpdateAgent.update(this);
-        BmobUpdateAgent.setUpdateListener(new BmobUpdateListener() {
-
-            @Override
-            public void onUpdateReturned(int updateStatus, UpdateResponse updateInfo) {
-                // TODO Auto-generated method stub
-                //根据updateStatus来判断更新是否成功
-                LogUtils.i(TAG, "updateStatus = " + updateStatus);
-                BmobException e = updateInfo.getException();
-                if (e == null) {
-                    LogUtils.i(TAG, "version = " +  updateInfo.version);
-
-                } else {
-                    LogUtils.e(TAG, "e.getMessage() = " + e.getMessage());
-                    LogUtils.e(TAG, "e.getErrorCode() = " + e.getErrorCode());
-                }
-            }
-        });
     }
 
     @Override
@@ -400,10 +378,20 @@ public class HomeActivity extends BaseActivity<HomeContract.Presenter> implement
 
     @Override
     public void getDataFail(String name) {
-        Message msg = new Message();
-        msg.what = LOAD_FAIL;
-        msg.obj = name;
-        mHandler.sendMessage(msg);
+        if (name.equals(CONNECT_INTERNET_TIME_OUT)) {
+            DialogUtils.showErrorDialog(HomeActivity.this, "请检查网络连接", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    //跳转wifi设置
+                    startActivity(new Intent(android.provider.Settings.ACTION_WIFI_SETTINGS));
+                }
+            }).show();
+        } else {
+            Message msg = new Message();
+            msg.what = LOAD_FAIL;
+            msg.obj = name;
+            mHandler.sendMessage(msg);
+        }
     }
 
 

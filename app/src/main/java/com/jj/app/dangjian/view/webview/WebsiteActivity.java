@@ -145,16 +145,7 @@ public class WebsiteActivity extends BaseActivity {
     @Override
     protected void initView() {
         super.initView();
-        //        Intent intent = getIntent();
-        //        getTitleName().setText(intent.getStringExtra(TITLE_NAME));
-        //        String url = intent.getStringExtra(URL);
-        //        LogUtils.i(TAG, url);
-        //        mAgentWeb = AgentWeb.with(this)
-        //                .setAgentWebParent(mll, new LinearLayout.LayoutParams(-1, -1))
-        //                .useDefaultIndicator()
-        //                .createAgentWeb()
-        //                .ready()
-        //                .go(url);
+
     }
 
 
